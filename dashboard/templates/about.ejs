@@ -1,0 +1,211 @@
+<%- include('blocks/header', {bot:bot, user: user, auth: auth}) %>
+
+<style>
+  .banner {
+      background-color: #7851c1;
+      max-width: auto;
+      position: relative;
+      margin: auto;
+      vertical-align: middle;
+      height: 335px;
+  }
+
+  .banner .title {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 92px;
+      left: 100px;
+      position: absolute;
+  }
+
+  .banner .sub-title {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      margin-top: 100px;
+      left: 120px;
+      position: absolute;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: center;
+    width: 50%;
+    padding: 10px;
+    height: 230px;
+    text-align: center;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+  }
+
+  .column h2 {
+   color: #6441A4;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .column p {
+   color: #222222;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .btn {
+    border-radius: 4px;
+    background-color: #6441A4;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    vertical-align: middle;
+    transition: transform .8s;
+   }
+
+  .btn:hover {
+   color: white;
+   transform: scale(1.1);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+</style>
+<div class="banner">
+ <h1 class="title" id="title">
+   
+  </h1>
+  <p class="sub-title" id="sub-title">
+    
+  </p>
+</div>
+<body>
+<div class="container">  
+ <div class="row">
+  <div class="column">
+    <h2>Sobre Mim (Barreto)</h2>
+    <p id="columnA"></p>
+  </div>
+  <div class="column">
+    <h2>Como jogar conosco ?</h2>
+    <p id="columnB"></p>
+    <a href="/room" class="btn" role="button">Entrar na Sala de Espera</a>
+  </div>
+  <div class="column">
+    <h2>Como ajudar o canal?</h2>
+    <p id="columnC"></p>
+    <a href="/contribute" class="btn" role="button">Principais links para contribuir</a>
+  </div>
+  <div class="column">
+    <h2>O que ganho contribuindo com o canal?</h2>
+    <p id="columnD"></p>
+  </div>
+ </div>
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var i = 0;
+var txt = "Sobre";
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("title").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter()
+
+var iA = 0;
+var txtA = "As principais informações sobre o Barretão <3";
+var speedA = 10;  
+
+function typeWriterA() {
+  if (iA < txtA.length) {
+    document.getElementById("sub-title").innerHTML += txtA.charAt(iA);
+    iA++;
+    setTimeout(typeWriterA, speedA);
+  }
+}
+  
+typeWriterA()
+
+var iB = 0;
+var txtB = "Então, para que você possar jogar com Barreto, basta você estar no chat da live na Twitch e entrar na sala de espera em que o link está aqui abaixo.";
+var speedB = 10;  
+
+function typeWriterB() {
+  if (iB < txtB.length) {
+    document.getElementById("columnB").innerHTML += txtB.charAt(iB);
+    iB++;
+    setTimeout(typeWriterB, speedB);
+  }
+}
+  
+typeWriterB()
+
+var iC = 0;
+var txtC = "Sou o Rafael, mas pode me chamar de Barreto! Tenho 30 anos e sou mais um apaixonado por games. Meu objetivo na Twitch é compartilhar a minha diversão com vocês. Espero que gostem!";
+var speedC = 10;  
+
+function typeWriterC() {
+  if (iC < txtC.length) {
+    document.getElementById("columnA").innerHTML += txtC.charAt(iC);
+    iC++;
+    setTimeout(typeWriterC, speedC);
+  }
+}
+  
+typeWriterC()
+
+var iD = 0;
+var txtD = "Ajude o canal contribuindo de várias formas, você pode ajudar com os links disponíveis no link abaixo, com Donates e/ou Subs que são formas pagas, Loots e/ou Divulgação que são formas gratuitas que do mesmo jeito ajudam muito o canal.";
+var speedD = 10;  
+
+function typeWriterD() {
+  if (iD < txtD.length) {
+    document.getElementById("columnC").innerHTML += txtD.charAt(iD);
+    iD++;
+    setTimeout(typeWriterD, speedD);
+  }
+}
+  
+typeWriterD()
+
+var iE = 0;
+var txtE = "Cada premiação depende de qual forma você contribue. Se você se inscrever no canal da Twitch, você recebrá 3000 BRTS (Moedas do canal), Badge no chat da live, Um Emoji no chat da live e um cargo em nosso servidor do Discord. Se você fizer donate, a cada real você recebrá 200 BRTS. E por dar Loots, sua mensagem aparecerá na live, com seu nome.";
+var speedE = 10;  
+
+function typeWriterE() {
+  if (iE < txtE.length) {
+    document.getElementById("columnD").innerHTML += txtE.charAt(iE);
+    iE++;
+    setTimeout(typeWriterE, speedE);
+  }
+}
+  
+typeWriterE()
+</script>

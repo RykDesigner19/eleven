@@ -1,0 +1,113 @@
+<%- include('blocks/header', {bot:bot, user: user, auth: auth}) %>
+
+<style>
+.img-banner {
+  max-width: auto;
+  position: relative;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.stream-iframe {
+  height: 100%; 
+  width: 100%;
+  vertical-align: middle;
+  border-width: 0; 
+  scrolling: none;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #6441A4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  width: 150px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  vertical-align: middle;
+  transition: transform .8s;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 1s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.buttons-line {
+  position: relative;
+  margin-top: -30px;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.video {
+  vertical-align: middle;
+  width: 100%;
+  height: 60%;
+  vertical-align: middle;
+}
+
+iframe {
+ border-radius: 4px;
+ border-color: #222;
+ border-style: solid;
+ border-width: 1px;
+}
+</style>
+
+<div class="img-banner">
+  <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4bbda96a-fa70-48ad-a95b-f558a458c6d9-profile_banner-480.png" style="width:100%">
+</div>
+<div class="buttons-line container">
+  <a href="/live"><button class="button" style="width:175px;"><span>Assistir</span></button></a>
+  <a href="/facebook"><button class="button" style="width:175px;"><span>Facebook</span></button></a>
+  <a href="/discord"><button class="button" style="width:175px;"><span>Discord</span></button></a>
+  <a href="/twitter"><button class="button" style="width:155px;"><span>Twitter</span></button></a>
+  <a href="/yt"><button class="button" style="width:175px;"><span>Youtube</span></button></a>
+  <a href="/wpp"><button class="button" style="width:175px;"><span>Whatsapp</span></button></a>
+</div>
+<div class="container">
+ <br>
+ <br>
+ <iframe
+    src="https://player.twitch.tv/?channel=barretorrr"
+    height="500"
+    width="100%"
+    frameborder="0"
+    scrolling="none"
+    allowfullscreen="none">
+ </iframe>
+</div>
+<br>
+<%- include('blocks/footer') %>
